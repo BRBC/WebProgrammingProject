@@ -1,0 +1,47 @@
+[
+    {
+        "intrebare": "De unde provine pâinea muffuletta",
+        "variante": ["Napoli", "Sicilia", "Bergamo"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Brânza halloumi, din lapte de capră sau de oaie, își are originea în...",
+        "variante": ["Israel", "Iran", "Cipru"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Pentru a putea prepara un cacciatore ai nevoie de carne de...",
+        "variante": ["rată", "pui", "porc"],
+        "corect": 1
+    },
+    {
+        "intrebare": "Cu ce tip de aluat se fac eclerele?",
+        "variante": ["cu aluat de tip foitaj", "cu aluat pufos", "cu choux"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Aceste 3 sosuri fac parte din bucătăria mediteraneeană:",
+        "variante": ["tzatziki, salsa di Piacenza, ponzu", "fesenjan, tkemali, tzatziki", "agrodolce, tzatziki, marinara"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Care din cele de mai jos este un tip de sushi?",
+        "variante": ["hiyashi sushi", "yaki-sushi", "makizushi"],
+        "corect": 1
+    },
+    {
+        "intrebare": "Unul dintre acestea este un sos specific regiunii culinare est-mediteraneene. Pont: este făcut din semințe de susan.",
+        "variante": ["muhammara", "tahini", "hummus"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Tofu se face din...",
+        "variante": ["lapte de capră", "lapte de soia", "lapte de bivoliță"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Știți ce este teriyaki?",
+        "variante": ["un desert de origine italiană cunoscut mai ales ca tiramisu", "un tip de sushi, preparat din peștele terimaru", "o tehnică de gătit japoneză care presupune și glazurarea cu sos de soia"],
+        "corect": 1
+    }
+]

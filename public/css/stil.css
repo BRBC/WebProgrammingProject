@@ -1,0 +1,209 @@
+header {
+    /* background-color: #bc8f8f; */
+    background-image: linear-gradient(rgb(250, 209, 216), #ffffff);
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+    text-decoration-style: wavy;
+    margin: 0;
+}
+
+/* header img{
+    width: 700px;
+    height: auto;
+} */
+
+nav {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+a:link {
+    color: #3d0216;
+}
+
+a:visited {
+    color: #3d0216;
+}
+
+a:hover {
+    color: #3d0216;
+}
+
+a:active {
+    color: #ff69b4;
+}
+
+nav a {
+    font-size: large;
+    font-style: italic;
+}
+
+/* h2::first-letter {
+    font-size: xx-large;
+} */
+
+aside {
+    /* float:right; */
+    /* background-color: #955858; */
+    font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-style: italic;
+    text-align: center;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    /*background attachemtn*/
+}
+
+/* canvas{
+    background-color: #ffffff;
+    border:1px solid #000000;
+} */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 130px 1fr 1fr 50px;
+    /* gap:10px;
+    padding:10px;
+    box-sizing:border-box; */
+}
+
+.container div {
+    /* padding:10px;
+    border:1px solid #000000 */
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.header {
+    grid-column-start: 1;
+    /* specify line of start */
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nav {
+    grid-column-start: 1;
+    /* specify line of start */
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.body {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+/* .aside{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start:2;
+    grid-row-end:4;
+
+} */
+
+#bine-ai-venit {
+    text-align: center;
+    color: purple;
+}
+
+#index {
+    text-align: center;
+}
+
+#text-link {
+    font-size: 25px;
+}
+
+.text-link {
+    background-color: purple;
+    border-radius: 4px;
+}
+
+#raspCorect {
+    color: #05635e;
+    text-align: center;
+}
+
+.tabelProduse {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-bar-text {
+    color: #ffefd5;
+}
+
+.labelProduseTabel {
+    text-align: center;
+}
+
+.tabelProduse2 {
+    text-align: center;
+}
+
+#formular-chestionar {
+    border: 3px solid rgb(250, 209, 216);
+    border-radius: 4px;
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.footer {
+    background-image: linear-gradient(#ffffff, rgb(250, 209, 216));
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.tabelSectiunea4 th, td, tr {
+    width: 100px;
+    height: 50px;
+}
+
+.diviziune {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container1 {
+    display: flex;
+}
+
+.flex-container2 {
+    display: flex;
+}
+
+.flex-container>div {
+    background-color: #bc8f8f;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* .body,.aside{
+      background-image: url("../Imagini/backgroundImage.jpg");
+  } */
+
+#mesajEroare {
+    color: red;
+}

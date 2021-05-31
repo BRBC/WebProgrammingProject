@@ -1,0 +1,49 @@
+<% if(cookies["username"]!=null){ %>
+    <h2 id="bine-ai-venit">Bine ai venit, <%= cookies["username"] %>
+    </h2>
+    <% } %>
+        <p id="index">
+            <button class="text-link"><a href="/autentificare"
+                    id="text-link">Autentificare</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="text-link"><a href="/creare-bd" id="text-link">Creare
+                    BD</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="text-link"><a href="/inserare-db" id="text-link">Inserare BD</a></button>
+            <!-- <a href="/autentificare" >Autentificare</a>
+<br>
+<a href="/creare-bd" >Creare BD</a>
+<br>
+<a href="/inserare-db">Inserare BD</a> -->
+
+            <% if (result!=undefined) { %>
+                <h2 class="labelProduseTabel">Tabel produse</h2>
+                <table class="tabelProduse">
+                    <tr>
+                        <th>Produs</th>
+                        <th>Preț</th>
+                        <th>Adăugare</th>
+
+                    </tr>
+                    <% for(var i=0;i<result.length ;i++){ %>
+                        <tr>
+                            <td>
+                                <%= result[i]['nume'] %>
+                            </td>
+                            <td>
+                                <%= result[i]['pret'] %>
+                            </td>
+                            <td>
+                                <form action="/adauga-cos" method="post">
+                                    <button type="submit">Adauga in cos</button>
+                                    <input type="hidden" name="id" value=<%=result[i]['id']%>>
+                                    <input type="hidden" name="nume" value=<%=result[i]['nume']%>>
+                                    <input type="hidden" name="pret" value=<%=result[i]['pret']%>>
+
+                                </form>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
+                <% } %>
+        </p>

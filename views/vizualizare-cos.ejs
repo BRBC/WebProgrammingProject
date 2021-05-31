@@ -1,0 +1,15 @@
+<h1>Coșul dumneavoastră de până acum</h1>
+<% if (listaProduse!= null) { %>
+    <table class="tabelProduse2">
+        <tr>
+            <th>Produs</th>
+            <td>Pret</th>
+        </tr>
+        <% for(var i=0;i<listaProduse.length ;i++){ %>
+            <tr>
+                <td> <%= listaProduse[i]['nume'] %></td>
+                <td> <%= listaProduse[i]['pret'] %></td>
+            </tr>
+            <% } %>
+    </table>
+<% } %>

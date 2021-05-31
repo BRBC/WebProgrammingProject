@@ -1,0 +1,4 @@
+[
+    { "nume": "cat", "parola": "cat","culoare preferata":"mov","nume complet":"Catalina","rol":"ADMIN"},
+    { "nume": "gab", "parola": "gab","culoare preferata":"albastru","nume complet":"Gabriela","rol":"USER"}
+]
