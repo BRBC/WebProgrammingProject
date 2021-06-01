@@ -1,6 +1,6 @@
 header {
     /* background-color: #bc8f8f; */
-    background-image: linear-gradient(rgb(250, 209, 216), #ffffff);
+    background-image: linear-gradient(#fad1d8, #ffffff);
     padding: 20px;
     text-align: center;
     font-size: 25px;
@@ -69,7 +69,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 130px 1fr 1fr 50px;
+    grid-template-rows: 21px 100px 130px 1fr 1fr 50px;
     /* gap:10px;
     padding:10px;
     box-sizing:border-box; */
@@ -84,15 +84,20 @@ table, th, td {
     border: 1px solid black;
 }
 
-.header {
-    grid-column-start: 1;
-    /* specify line of start */
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
+.autentificare button {
+    float: right;
+    background-color: rgb(250, 177, 189);
 }
 
-.nav {
+.autentificare {
+    background-image:linear-gradient(#ffc0cb,#fad1d8);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.header {
     grid-column-start: 1;
     /* specify line of start */
     grid-column-end: 6;
@@ -100,10 +105,18 @@ table, th, td {
     grid-row-end: 3;
 }
 
+.nav {
+    grid-column-start: 1;
+    /* specify line of start */
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
 .body {
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start: 3;
+    grid-row-start: 4;
     grid-row-end: 5;
 }
 
@@ -168,8 +181,8 @@ table, th, td {
     background-image: linear-gradient(#ffffff, rgb(250, 209, 216));
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
 }
 
 .tabelSectiunea4 th, td, tr {
