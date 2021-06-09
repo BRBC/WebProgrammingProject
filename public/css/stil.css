@@ -1,6 +1,6 @@
 header {
     /* background-color: #bc8f8f; */
-    background-image: linear-gradient(#fad1d8, #ffffff);
+    background-image: linear-gradient(#f7a7b4, #fad1d8);
     padding: 20px;
     text-align: center;
     font-size: 25px;
@@ -14,9 +14,51 @@ header {
     height: auto;
 } */
 
+.productImages {
+    width: 270px;
+    height: auto;
+}
+
+.tabelProduse form button {
+    height: 30px;
+    width: 120px;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+.imagini-vizualizare-cos {
+    width: 150px;
+    height: 150px;
+}
+
+.productName {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tabelProduse form button:hover {
+    background-color: rgb(253, 109, 133);
+    padding: 5px 5px;
+    font-size: 15px;
+    margin: 4px 2px;
+}
+
 nav {
     padding: 20px;
-    background-color: #ffffff;
+    background: radial-gradient(#f77f93,#fad1d8);
+    text-align: center;
+}
+
+.butonFormular{
+    background-color:#f77f93;
+    width:100px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 15px;
+    margin: 4px 2px;
+}
+.butonCos{
     text-align: center;
 }
 
@@ -55,7 +97,7 @@ aside {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #fad1d8;
     margin: 0;
     padding: 0;
     /*background attachemtn*/
@@ -79,9 +121,14 @@ body {
     /* padding:10px;
     border:1px solid #000000 */
 }
-
-table, th, td {
+table{
     border: 1px solid black;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
 }
 
 .autentificare button {
@@ -89,10 +136,20 @@ table, th, td {
     background-color: rgb(250, 177, 189);
 }
 
+#butonDelogare{
+    background-color:#f77f93;
+    width:100px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 15px;
+    margin: 4px 2px;
+}
+
 .autentificare {
-    background-image:linear-gradient(#ffc0cb,#fad1d8);
+    background-image: linear-gradient(#faa7b5, #f7a7b4);
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 6;
 }
@@ -130,7 +187,8 @@ table, th, td {
 
 #bine-ai-venit {
     text-align: center;
-    color: purple;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
 }
 
 #index {
@@ -165,57 +223,59 @@ table, th, td {
 }
 
 .tabelProduse2 {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
-#formular-chestionar {
+#formularLogin{
     border: 3px solid rgb(250, 209, 216);
-    border-radius: 4px;
+    border-radius: 20px;
+    text-align: center;
     width: 700px;
     height: 100%;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #fab5b5;
+    background: radial-gradient(#f77f93,#fad1d8);
+}
+
+#formularProfil{
+    border: 3px solid rgb(250, 209, 216);
+    border-radius: 20px;
+    text-align: center;
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fab5b5;
+    background: radial-gradient(#f77f93,#fad1d8);
+}
+.quizAnswers{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.intrebareChestionar{
+    font-size: 20px;
+    font-weight: bolder;
+}
+#formular-chestionar {
+    border: 3px solid #fad1d8;
+    border-radius: 4px;
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: dashed;
+    background: radial-gradient(#f77f93,#fad1d8);
 }
 
 .footer {
-    background-image: linear-gradient(#ffffff, rgb(250, 209, 216));
+    background-image: linear-gradient(#fad1d8, #f7a7b4);
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 6;
     grid-row-end: 7;
 }
 
-.tabelSectiunea4 th, td, tr {
-    width: 100px;
-    height: 50px;
-}
-
-.diviziune {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-container {
-    display: flex;
-}
-
-.flex-container1 {
-    display: flex;
-}
-
-.flex-container2 {
-    display: flex;
-}
-
-.flex-container>div {
-    background-color: #bc8f8f;
-    opacity: 0.8;
-    text-align: center;
-}
-
-/* .body,.aside{
-      background-image: url("../Imagini/backgroundImage.jpg");
-  } */
 
 #mesajEroare {
     color: red;

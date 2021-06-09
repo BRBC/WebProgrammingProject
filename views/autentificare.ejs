@@ -1,9 +1,15 @@
-<form id="formularLogIn" action="/verificare-autentificare" method="post">
-    <label for="username">Utilizator:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Parola:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <input type="submit" value="Submit">
+<br>
+<br>
+<br>
+<form id="formularLogin" action="/verificare-autentificare" method="post">
+  <h2>Logare</h2>
+  <hr>
+    <label for="username" style="font-weight: bold;">Utilizator:</label><br><br>
+    <input type="text" id="username" style="border-radius: 5px;" name="username"><br><br>
+    <label for="password" style="font-weight: bold;">Parola:</label><br><br>
+    <input type="password" id="password" style="border-radius: 5px;" name="password"><br><br>
+    <input class="butonFormular" type="submit" value="Submit">
+    <br><br>
   </form> 
   <% if(cookies["mesajEroare"]!=null){ %>
     <p id="mesajEroare"> <%= cookies["mesajEroare"] %></p>

@@ -4,8 +4,11 @@ const bodyParser = require('body-parser')
 const fs = require('fs');
 const cookieParser = require('cookie-parser');
 var session = require('express-session');
-const { send } = require('process');
+const {
+	send
+} = require('process');
 var mysql = require('mysql');
+// var functii = require('./public/js/functii');
 
 
 const app = express();
@@ -30,7 +33,9 @@ app.use(express.static('public'))
 // corpul mesajului poate fi interpretat ca json; datele de la formular se găsesc în format json în req.body
 app.use(bodyParser.json());
 // utilizarea unui algoritm de deep parsing care suportă obiecte în obiecte
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
 
 // la accesarea din browser adresei http://localhost:6789/ se va returna textul 'Hello World'
 // proprietățile obiectului Request - req - https://expressjs.com/en/api.html#req
@@ -62,27 +67,183 @@ app.get('/', (req, res) => {
 		con.query("SELECT * FROM produse", function (err, result, fields) {
 			if (err) throw err;
 			//console.log(result);
-			res.render("index", { cookies: cookies, result: result });
+			res.render("index", {
+				cookies: cookies,
+				result: result
+			});
 		});
 	});
 });
 
+app.get('/profil', (req, res) => {
+	var cookies = req.cookies;
+	//console.log(result);
+	res.render("profil", {
+		cookies: cookies
+	});
+
+});
+
+app.get('/maybellineProducts', (req, res) => {
+	var cookies = req.cookies;
+	var con = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "123catalina",
+		database: "cumparaturi"
+	});
+
+	//console.log(cookies["username"]);
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM maybellineproduse", function (err, result, fields) {
+			if (err) throw err;
+			res.render("maybellineProducts", {
+				cookies: cookies,
+				result: result
+			});
+		});
+	});
+});
+
+app.get('/lorealProducts', (req, res) => {
+	var cookies = req.cookies;
+	var con = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "123catalina",
+		database: "cumparaturi"
+	});
+
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM lorealproduse", function (err, result, fields) {
+			if (err) throw err;
+			res.render("lorealProducts", {
+				cookies: cookies,
+				result: result
+			});
+		});
+	});
+});
+
+app.get('/benefitProducts', (req, res) => {
+	var cookies = req.cookies;
+	var con = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "123catalina",
+		database: "cumparaturi"
+	});
+
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM benefitproduse", function (err, result, fields) {
+			if (err) throw err;
+			res.render("benefitProducts", {
+				cookies: cookies,
+				result: result
+			});
+		});
+	});
+});
+
+app.get('/elfProducts', (req, res) => {
+	var cookies = req.cookies;
+	var con = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "123catalina",
+		database: "cumparaturi"
+	});
+
+	//console.log(cookies["username"]);
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM elfproduse", function (err, result, fields) {
+			if (err) throw err;
+			//console.log(result);
+			res.render("elfProducts", {
+				cookies: cookies,
+				result: result
+			});
+		});
+	});
+});
+
+app.get('/nyxProducts', (req, res) => {
+	var cookies = req.cookies;
+	var con = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "123catalina",
+		database: "cumparaturi"
+	});
+
+	//console.log(cookies["username"]);
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM nyxproduse", function (err, result, fields) {
+			if (err) throw err;
+			//console.log(result);
+			res.render("nyxProducts", {
+				cookies: cookies,
+				result: result
+			});
+		});
+	});
+});
+
+app.get('/kylieProducts', (req, res) => {
+	var cookies = req.cookies;
+	var con = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "123catalina",
+		database: "cumparaturi"
+	});
+
+	//console.log(cookies["username"]);
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM kylieproduse", function (err, result, fields) {
+			if (err) throw err;
+			//console.log(result);
+			res.render("kylieProducts", {
+				cookies: cookies,
+				result: result
+			});
+		});
+	});
+});
+
+
+
 var listaProduse = [];
 app.post("/adauga-cos", (req, res) => {
 	console.log(req.body);
+	console.log(req.body.nume);
 	listaProduse.push(req.body);
-	console.log(listaProduse);
+	// console.log(listaProduse);
 });
 
 app.get('/autentificare', (req, res) => {
 	var cookies = req.cookies;
-	res.render('autentificare', { cookies });
+	res.render('autentificare', {
+		cookies
+	});
+});
+app.get('/delogare', (req, res) => {
+	res.clearCookie('username');
+	res.clearCookie("tipPiele");
+	res.clearCookie("machiatZilnic");
+	res.clearCookie("pieleSensibila");
+	res.redirect('/');
 });
 app.get('/admin', (req, res) => {
 	if (req.session.rol == "ADMIN") {
 		res.render('admin');
-	}
-	else {
+	} else {
 		res.redirect('/');
 	}
 });
@@ -91,36 +252,47 @@ app.post('/verificare-autentificare', (req, res) => {
 	for (let i = 0; i < utilizator.length; i++) {
 		if (req.body["username"] == utilizator[i]["nume"] && req.body["password"] == utilizator[i]["parola"]) {
 			req.session.name = utilizator[i]["nume complet"];
-			req.session.colour = utilizator[i]["culoare preferata"];
 			req.session.rol = utilizator[i]["rol"];
 			res.cookie('username', utilizator[i]["nume complet"]);
 			check = true;
+
 			res.redirect("/");
 		}
 	}
 	if (check == false) {
-		res.cookie('mesajEroare', 'Eroare la introducerea datelor', { maxAge: 1000 });
+		res.cookie('mesajEroare', 'Eroare la introducerea datelor', {
+			maxAge: 1000
+		});
 		res.redirect("/autentificare");
 	}
 });
 // la accesarea din browser adresei http://localhost:6789/chestionar se va apela funcția specificată
 app.get('/chestionar', (req, res) => {
+	res.clearCookie("tipPiele");
+	res.clearCookie("machiatZilnic");
+	res.clearCookie("pieleSensibila");
 	// în fișierul views/chestionar.ejs este accesibilă variabila 'intrebari' care conține vectorul de întrebări
-	res.render('chestionar', { intrebari: listaIntrebari });
+	res.render('chestionar', {
+		intrebari: listaIntrebari
+	});
 });
 
 
-
+var tipPiele = ["Uscată", "Mixtă", "Grasă", "Normală"];
+var machiatZilnic = ["Deloc", "Puțin", "Acoperire medie", "Acoperire mare"];
+var pieleSensibila = ["Niciodată", "Rareori", "Câteodată", "Tot timpul"];
+var raspunsuri = [];
 app.post('/rezultat-chestionar', (req, res) => {
 	console.log(req.body);
+	res.cookie('tipPiele', tipPiele[req.body[0]]);
+	res.cookie('machiatZilnic', machiatZilnic[req.body[1]]);
+	res.cookie('pieleSensibila', pieleSensibila[req.body[2]]);
 	//res.send("formular: " + JSON.stringify(req.body));
-	var raspunsuriCorecte = 0;
 	for (var i = 0; i < listaIntrebari.length; i++) {
-		if (listaIntrebari[i].corect == req.body[i]) {
-			raspunsuriCorecte++;
-		}
+		raspunsuri.push(req.body[i]);
 	}
-	res.render('rezultat-chestionar', { rezultate: raspunsuriCorecte });
+	// res.render('rezultat-chestionar', { rezultate: raspunsuri });
+	res.redirect("/");
 });
 
 app.post('/adaugare-produs', (req, res) => {
@@ -239,6 +411,13 @@ app.get('/inserare-db', (req, res) => {
 });
 
 app.get('/vizualizare-cos', (req, res) => {
-	res.render('vizualizare-cos', { listaProduse });
+	res.render('vizualizare-cos', {
+		listaProduse
+	});
+})
+
+app.get('/golireCos', (req, res) => {
+	listaProduse=[];
+	res.redirect('/');
 })
 app.listen(port, () => console.log(`Serverul rulează la adresa http://localhost:`));

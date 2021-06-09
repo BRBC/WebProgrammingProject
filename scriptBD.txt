@@ -1,0 +1,39 @@
+CREATE TABLE benefitProduse(id INTEGER(3), nume VARCHAR(255),volum VARCHAR(10), pret VARCHAR(10));
+CREATE TABLE elfProduse(id INTEGER(3), nume VARCHAR(255),volum VARCHAR(10), pret VARCHAR(10));
+CREATE TABLE lorealProduse(id INTEGER(3), nume VARCHAR(255),volum VARCHAR(10), pret VARCHAR(10));
+CREATE TABLE maybellineProduse(id INTEGER(3), nume VARCHAR(255),volum VARCHAR(10), pret VARCHAR(10));
+CREATE TABLE nyxProduse(id INTEGER(3), nume VARCHAR(255),volum VARCHAR(10), pret VARCHAR(10));
+CREATE TABLE kylieProduse(id INTEGER(3), nume VARCHAR(255),volum VARCHAR(10), pret VARCHAR(10));
+
+
+insert into benefitProduse(id,nume,volum,pret) values (1,'The POREfessional Pro Balm Baza pentru minimizarea aspectului porilor','22 ml','168 lei');
+insert into benefitProduse(id,nume,volum,pret) values (2,'Iluminator Benefit High Beam Luminiscent','6 ml','62 lei');
+insert into benefitProduse(id,nume,volum,pret) values (3,'Fond de ten Benefit Hello Happy Flawless Medium Neutral','30 ml','90 lei');
+insert into benefitProduse(id,nume,volum,pret) values (4,'Eyeliner Benefit Roller 11:42 PM 6/3/2021Liner Eye Bright Pencil','0.11g','82 lei');
+
+
+insert into elfProduse(id,nume,volum,pret) values (1,'Glitter Melt Liquid Eyeshadow - fard pleoape','3 ml','45 lei');
+insert into elfProduse(id,nume,volum,pret) values (2,'Liquid Lip Primer - primer buze','2.8 g','33 lei');
+insert into elfProduse(id,nume,volum,pret) values (3,'Rose Gold Sunset Palette','12 g','83 lei');
+insert into elfProduse(id,nume,volum,pret) values (4,'Primer Infused Shimmer Blush','10 g','55 lei');
+
+insert into lorealProduse(id,nume,volum,pret) values (1,'Air Mega Volum-mascare','9 ml','53 lei');
+insert into lorealProduse(id,nume,volum,pret) values (2,'Mascara Bambi Eye False Lash-mascare','9 ml','75 lei');
+insert into lorealProduse(id,nume,volum,pret) values (3,'True Match-fond ten','107g','79 lei');
+insert into lorealProduse(id,nume,volum,pret) values (4,'Infaillible Satin- fond ten','30 ml','81 lei');
+
+insert into maybellineProduse(id,nume,volum,pret) values (1,'Fit Me Matte & Poreless fond de ten','30 ml','39 lei');
+insert into maybellineProduse(id,nume,volum,pret) values (2,'Instant Anti Age Eraser','6.8 ml','50 lei');
+insert into maybellineProduse(id,nume,volum,pret) values (3,'Setting Spray Fixare Makeup','100 ml','53 lei');
+insert into maybellineProduse(id,nume,volum,pret) values (4,'Mascara Colossal','24 g','40 lei');
+
+insert into nyxProduse(id,nume,volum,pret) values (1,'Cant Stop Wont Stop Concealer','3.5 ml','43 lei');
+insert into nyxProduse(id,nume,volum,pret) values (2,'Cant Stop Wont Stop 24h Foundation','30 ml','80 lei');
+insert into nyxProduse(id,nume,volum,pret) values (3,'Epic Wear Semi-Permanent Liquid Liner','3.5 ml','53 lei');
+insert into nyxProduse(id,nume,volum,pret) values (4,'Makeup Setting Spray Matte Finish','60 ml','40 lei');
+
+insert into kylieProduse(id,nume,volum,pret) values (1,'Comforting Glossy Lip Oil','6 ml','123 lei');
+insert into kylieProduse(id,nume,volum,pret) values (2,'Coconut Body Lotion','237 ml','153 lei');
+insert into kylieProduse(id,nume,volum,pret) values (3,'Coconut Body Scrub','237 ml','153 lei');
+insert into kylieProduse(id,nume,volum,pret) values (4,'Hydrating Face Mask','85 g','199 lei');
+

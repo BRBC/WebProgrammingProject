@@ -1,4 +1,12 @@
 [
-    { "nume": "cat", "parola": "cat","culoare preferata":"mov","nume complet":"Catalina","rol":"ADMIN"},
-    { "nume": "gab", "parola": "gab","culoare preferata":"albastru","nume complet":"Gabriela","rol":"USER"}
+    {
+        "nume": "cat",
+        "parola": "cat",
+        "nume complet": "Catalina"
+    },
+    {
+        "nume": "gab",
+        "parola": "gab",
+        "nume complet": "Gabriela"
+    }
 ]

@@ -1,0 +1,106 @@
+<!-- <% if (result!=undefined) { %>
+    <h2 class="labelProduseTabel">Tabel produse</h2>
+    <table class="tabelProduse">
+        <tr>
+            <th>Produs</th>
+            <th>Preț</th>
+            <th>Adăugare</th>
+
+        </tr>
+        <% for(var i=0;i<result.length ;i++){ %>
+            <tr>
+                <td>
+                    <%= result[i]['nume'] %>
+                </td>
+                <td>
+                    <%= result[i]['pret'] %>
+                </td>
+                <td>
+                    <form action="/adauga-cos" method="post">
+                        <button type="submit">Adauga in cos</button>
+                        <input type="hidden" name="id" value=<%=result[i]['id']%>>
+                        <input type="hidden" name="nume" value="<%=result[i]['nume']%>">
+                        <input type="hidden" name="pret" value=<%=result[i]['pret']%>>
+
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+    <% } %> -->
+
+    <% if (result!=undefined) { %>
+        <h2 class="labelProduseTabel">Tabel produse</h2>
+        <table class="tabelProduse">
+            <tr>
+                <td>
+                    <img src="Imagini/nyx/1.png" alt="imagine produs" class="productImages">
+                </br>
+                    <p class="productName"><%= result[0]['nume'] %></p>
+            <hr>
+                        <p class="volumProdus">Volum: <%= result[0]['volum'] %></p>
+                    <p class="pretProdus">Pret: <%= result[0]['pret'] %></p>
+    
+                                <form action="/adauga-cos" method="post">
+                                    <button type="submit">Adauga in cos</button>
+                                    <input type="hidden" name="id" value=<%=result[0]['id']%>>
+                                    <input type="hidden" name="img" value="nyx/1.png">
+                                    <input type="hidden" name="nume" value="<%=result[0]['nume']%>">
+                                    
+                                    <input type="hidden" name="pret" value="<%=result[0]['pret']%>">
+                                    <input type="hidden" name="volum" value="<%=result[0]['volum']%>">
+    
+                                </form>
+                </td>
+                <td>
+                    <img src="Imagini/nyx/2.png" alt="imagine produs" class="productImages">
+                </br>
+                <p class="productName"><%= result[1]['nume'] %></p><hr>
+                        <p class="volumProdus">Volum: <%= result[1]['volum'] %></p>
+                    <p class="pretProdus">Pret: <%= result[1]['pret'] %></p>
+    
+                                <form action="/adauga-cos" method="post">
+                                    <button type="submit">Adauga in cos</button>
+                                    <input type="hidden" name="id" value=<%=result[1]['id']%>>
+                                    <input type="hidden" name="img" value="nyx/2.png">
+                                    <input type="hidden" name="nume" value="<%=result[1]['nume']%>">
+                                    <input type="hidden" name="pret" value="<%=result[1]['pret']%>">
+                                    <input type="hidden" name="volum" value="<%=result[1]['volum']%>">
+                                </form>
+                </td>
+                <td>
+                    <img src="Imagini/nyx/3.png" alt="imagine produs" class="productImages">
+                </br>
+                <p class="productName"><%= result[2]['nume'] %></p><hr>
+                        <p class="volumProdus">Volum: <%= result[2]['volum'] %></p>
+                    <p class="pretProdus">Pret: <%= result[2]['pret'] %></p>
+    
+                                <form action="/adauga-cos" method="post">
+                                    <button type="submit">Adauga in cos</button>
+                                    <input type="hidden" name="id" value=<%=result[2]['id']%>>
+                                    <input type="hidden" name="img" value="nyx/3.png">
+                                    <input type="hidden" name="nume" value="<%=result[2]['nume']%>">
+                                    <input type="hidden" name="pret" value="<%=result[2]['pret']%>">
+                                    <input type="hidden" name="volum" value="<%=result[2]['volum']%>">
+                                </form>
+                </td>
+                <td>
+                    <img src="Imagini/nyx/4.png" alt="imagine produs" class="productImages">
+                </br>
+                <p class="productName"><%= result[3]['nume'] %></p>
+                <hr>
+                        <p class="volumProdus">Volum: <%= result[3]['volum'] %></p>
+                    <p class="pretProdus">Pret: <%= result[3]['pret'] %></p>
+    
+                                <form action="/adauga-cos" method="post">
+                                    <button type="submit">Adauga in cos</button>
+                                    <input type="hidden" name="id" value=<%=result[3]['id']%>>
+                                    <input type="hidden" name="img" value="nyx/4.png">
+                                    <input type="hidden" name="nume" value="<%=result[3]['nume']%>">
+                                    <input type="hidden" name="pret" value="<%=result[3]['pret']%>">
+                                    <input type="hidden" name="volum" value="<%=result[3]['volum']%>">
+                                </form>
+                </td>
+            </tr>
+        </table>
+        <% } %>

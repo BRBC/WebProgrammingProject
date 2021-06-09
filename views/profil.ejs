@@ -1,0 +1,32 @@
+<% if(cookies!=undefined) { %>
+    <br><br>
+    <div id="formularProfil">
+        <h2>Profilul dumneavoastră</h2>
+        <hr>
+
+        <% if(cookies['username']!=undefined){ %>
+            <p id="bine-ai-venit">Bine ai venit, <%= cookies["username"] %>
+            </p>
+
+            <% if(cookies["tipPiele"]!=undefined){ %>
+                <p class="quizAnswers">Tip piele: <%= cookies["tipPiele"] %>
+                </p>
+                <% } %>
+                    <% if(cookies["machiatZilnic"]!=undefined){ %>
+                        <p class="quizAnswers">Tip acoperire: <%= cookies["machiatZilnic"] %>
+                        </p>
+                        <% } %>
+                            <% if(cookies["pieleSensibila"]!=undefined){ %>
+                                <p class="quizAnswers">Sensibilitate piele: <%= cookies["pieleSensibila"] %>
+                                </p>
+                                <% } %>
+                                    <a href=/delogare>
+                                        <button type="button" id="butonDelogare">Delogare</button>
+                                    </a>
+                                    <br>
+                                    <% }else{ %>
+                                        <h2>Nu sunteti logat</h2>
+                                        <%} %>
+
+    </div>
+    <% } %>

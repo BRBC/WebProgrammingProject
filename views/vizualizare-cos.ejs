@@ -1,15 +1,49 @@
-<h1>Coșul dumneavoastră de până acum</h1>
-<% if (listaProduse!= null) { %>
-    <table class="tabelProduse2">
-        <tr>
-            <th>Produs</th>
-            <td>Pret</th>
-        </tr>
-        <% for(var i=0;i<listaProduse.length ;i++){ %>
+<% function clearCos(){ if(listaProduse!=null){ listaProduse=null; } } %>
+    <% if (listaProduse.length!=0) { %>
+        <h1 style="text-align: center;">Coșul dumneavoastră de până acum</h1>
+        <table class="tabelProduse2">
             <tr>
-                <td> <%= listaProduse[i]['nume'] %></td>
-                <td> <%= listaProduse[i]['pret'] %></td>
+                <th>Imagine produs</th>
+                <th>Produs</th>
+                <th>Volum</th>
+                <th>Pret</th>
             </tr>
-            <% } %>
-    </table>
-<% } %>
+            <% var suma=0 %>
+                <% for(var i=0;i<listaProduse.length ;i++){ %>
+                    <% var pretString=listaProduse[i]['pret'].split(" "); 
+            var pret=parseInt(pretString[0]);
+            suma=suma+pret; %>
+            <tr>
+                <% var cale=" Imagini/"+listaProduse[i]['img']; %>
+                        <td>
+                            <img class="imagini-vizualizare-cos" src=<%=cale %> alt="nume produse">
+                        </td>
+                        <td style=" width: 150px;">
+                            <%= listaProduse[i]['nume'] %>
+                        </td>
+                        <td>
+                            <%= listaProduse[i]['volum'] %>
+                        </td>
+                        <td >
+                            <%= listaProduse[i]['pret'] %>
+                        </td>
+                        </tr>
+                        <% } %>
+                            <tr>
+                                <td></td>
+                                <td>
+                                </td>
+                                <td>Pret total:</td>
+                                <td>
+                                    <%= suma %> lei
+                                </td>
+                            </tr>
+        </table>
+        <br><br>
+        <div class="butonCos">
+            <form action="/golireCos" method="get">
+                <button class="butonFormular" type="submit">Golire cos</button>
+            </form>
+
+        </div>
+        <% } %>
